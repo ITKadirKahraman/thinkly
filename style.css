@@ -1,0 +1,269 @@
+:root{
+    /*
+        COLORS
+    */
+    --mainBackground-color: rgb(68,191,219);
+    --background-color: rgb(252, 251, 251);
+    --card-color: rgb(207, 233, 241);
+    --addButton-color: rgb(68,191,219);
+    --color: rgb(0, 0, 0);
+
+    /*
+        SIZE
+    */
+
+    /*
+    ****** px
+    */
+
+    --size-15px: 15px;
+    --size-80px: 80px;
+    --size-100px: 100px;
+    --size-188px: 188px;
+    --size-200px: 200px;
+    --size-280px: 280px;
+    --size-480px: 480px;
+
+    /*
+    ****** %
+    */
+
+    --size-100P: 100%;
+
+    /*
+    ****** vh
+    */
+
+    --size-100vh: 100vh;
+}
+
+html, body {
+    margin: var(--size-0);
+    padding: var(--size-0);
+    width: var(--size-100P);
+    background-color: var(--mainBackground-color);
+}
+
+main {
+    min-height: calc(var(--size-100vh) - var(--size-188px));
+}
+
+.header{
+    height: var(--size-80px);
+    text-align: center;
+    font-size: 24px;
+}
+
+.thinklyLogo{
+    height: 100px;
+    width: 272px;
+}
+
+/*
+****** cards main container
+*/
+
+.cards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+/*
+****** create a now nodes
+*/
+.newCard {
+    border: solid;
+    background-color: var(--card-color);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding: 20px;
+    border-radius: var(--size-15px);
+    border-color: var(--color);
+    height: var(--size-480px);
+    width: var(--size-280px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newCardHeaderNav{
+    top: 10px;
+    position: relative;
+    overflow: hidden;
+
+    clip-path: polygon(
+        0% 0px,     /* links runter */
+        40px 0%,     /* oben rein */
+        100% 0%,     /* oben rechts */
+        100% 100%,   /* unten rechts */
+        0% 100%      /* unten links */
+    );
+}
+
+.newNodeHeadline{
+    position: absolute;
+    top: 5px;
+    border-bottom-right-radius: 12px;
+    font-size: 15px;
+
+}
+
+.notizenblock {
+    height: 240px;
+    width: 240px;
+    clip-path: 30px;
+    border-top-left-radius: 135px;
+    position: relative;
+}
+
+.notizenblock img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.h2Newcard {
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.pNewCard {
+    color: var(--color);
+    font-size: 18px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.newCardNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.addNewCard {
+    background-color: var(--addButton-color);
+    border: solid;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 48px;
+    width: 260px;
+}
+
+.addNewCard img {
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+img {
+    width: 100%;       
+    height: auto;     
+    object-fit: cover;
+}
+
+.newNotiz{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*
+****** the creaded nodes
+*/
+
+.card {
+    border: solid;
+    background-color: var(--card-color);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding: 20px;
+    border-radius: var(--size-15px);
+    border-color: var(--color);
+    height: var(--size-480px);
+    width: var(--size-280px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    height: 330px;
+    width: 250px;
+}
+
+.cardNav {
+    border-radius: 15px;
+    height: 48px;
+    width: 260px;
+    padding: 10px;
+}
+
+.cardNav img {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.btn{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    width: 48px;
+    height: 48px;
+}
+
+/*
+****** Footer Container
+*/
+
+footer{
+    height: var(--size-100px);
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFFFF0;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    height: 108px;
+}
+
+.footerContainer h2{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.me{
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.icons{
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.me img{
+    width: 48px;
+    height: 48px;
+}
+
+.icons img{
+    width: 48px;
+    height: 48px;
+}
