@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="thinkly2.svg">
+    <title>Thinkly</title>
+</head>
+<body>
+    <header class="header">
+        <img class="thinklyLogo" src="thinklyLogo.svg" alt="Thinkly">
+    </header>
+    <main>
+        <div class="cards">
+            <div class="newCard" id="newCard">
+                <header>
+                    <nav class="newCardHeaderNav">
+                        <span class="newNodeHeadline"><strong>Neue <br> Notiz</strong></span>
+                        <img class="notizenblock" src="notiz.svg" alt="Notizenblock">
+                    </nav>
+                </header>
+                <article>
+                    <h2 class="h2Newcard">Brainstorming</h2>
+                    <p class="pNewCard">Deine Ideen verdienen einen Platz. <br>
+                    Halte hier dein Brainstorming fest, plane deine 
+                    To-Dos und bring deine Kreativität zum Fließen.
+                    </p>
+                </article>
+                <button class="addNewCard" id="addNewCard">
+                    <nav class="newCardNav">
+                        <img src="squarePlus.svg" alt="Neue Notiz">
+                        <p><h2 class="newNotiz">Neue Notiz erstellen</h2></p>
+                    </nav>
+                </button>
+            </div>
+            <div class="card">
+                <header class="cardHeader" id="cardHeader"><h2 id="thema">placeholder</h2></header>
+                <article>
+                    <input class="input" type="text" id="textField" placeholder="Schreib...">
+                </article>
+                <nav class="cardNav">
+                    <button class="btn" class="arrowLeft" id="arrowLeft"><img src="circleArrowLeft.svg" alt="Zum vohrigen Notiz"></button>
+                    <span id="dynamicNumber">placeholder</span>
+                    <button class="btn" class="arrowRight" id="arrowRight"><img src="circleArrowRight.svg" alt="Zum nächsten Notiz"></button>
+                    <button class="btn" id="addFolder"><img src="folderPlus.svg" alt="Einen Ordner hinzufügen"></button>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <nav class="me">
+                <h2>Kadir Kahraman</h2>
+                <a href="https://www.instagram.com/kdir.khrmn?igsh=aG8yMnBrNG9leWhs&utm_source=qr"><img src="instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/kadirkahramaninfo?utm_source=share_via&utm_content=profile&utm_medium=member_ios"><img src="linkedIn.svg" alt="LinkedIn"></a>
+            </nav>
+            <nav class="icons">
+                <h2>Meine Seiten</h2>
+                <a href="https://github.com/ITKadirKahraman"><img src="github.svg" alt="GitHub"></a>
+                <a href="https://coddy.tech/user/Kadir"><img src="coddy.png" alt="Coddy"></a>
+                <a href="https://leetcode.com/u/kadirkahraman/"><img src="leetcode.svg" alt="leetCode"></a>
+                <a href="https://www.codewars.com/users/ITKadirKahraman"><img src="codewars.svg" alt="CodeWars"></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
