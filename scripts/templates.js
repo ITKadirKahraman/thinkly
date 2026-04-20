@@ -1,4 +1,4 @@
-const createMainCard = () => {
+const getCreateMainCard = () => {
     const mainCard = document.getElementById('newCard');
     mainCard.innerHTML = 
     `<header>
@@ -22,36 +22,98 @@ const createMainCard = () => {
     </button>`;
 }
 
-createMainCard();
+getCreateMainCard();
 
-const createCard = () => {
+const getCard = () => {
     const card = document.getElementById('card');
     card.innerHTML = 
     `
     <header class="cardHeader" id="cardHeader">
-        <h2 id="thema">placeholder</h2>
+        <input class="inputHeader" type="text" id="textField" placeholder="Titel...">
     </header>
     <article>
-        <input class="input" type="text" id="textField" placeholder="Schreib...">
+        <input class="input" type="text" id="inputText" placeholder="Gedankengang schreiben...">
+        <textarea id="outputText" rows="20" cols="30" placeholder="Dient als Übersicht des Textes."></textarea>
     </article>
     <nav class="cardNav">
         <button class="btn arrowLeft" id="arrowLeft">
             <img src="./assets/img/circleArrowLeft.svg" alt="Zum vohrigen Notiz">
         </button>
-        <span id="dynamicNumber">placeholder</span>
         <button class="btn arrowRight" id="arrowRight">
             <img src="./assets/img/circleArrowRight.svg" alt="Zum nächsten Notiz">
         </button>
         <button class="btn" id="addFolder">
             <img src="./assets/img/folderPlus.svg" alt="Einen Ordner hinzufügen">
         </button>
+        <button class="btn" id="trashDelete">
+            <img src="./assets/img/trash.svg" alt="Löschen">
+        </button>
     </nav>
     `;
 };
 
-createCard();
+getCard();
 
-const createFooter = () => {
+const getCreateCard = () => {
+    return `
+    <div class="card">
+        <header class="cardHeader">
+            <input class="inputHeader" type="text" id="text" placeholder="Titel...">
+        </header>
+        <article>
+            <textarea class="textAreaCreated" id="textAreaCreated" rows="20" cols="30" placeholder="Schreib hier deine Gedanken...">
+            </textarea>
+        </article>
+        <nav class="cardNavCreaded">
+            <button class="btn arrowLeft" id="arrowLeft">
+                <img src="./assets/img/circleArrowLeft.svg" alt="Zum vohrigen Notiz">
+            </button>
+            <button class="btn arrowRight" id="arrowRight">
+                <img src="./assets/img/circleArrowRight.svg" alt="Zum nächsten Notiz">
+            </button>
+            <button class="btn" id="addFolder">
+                <img src="./assets/img/folderPlus.svg" alt="Einen Ordner hinzufügen">
+            </button>
+            <button class="btn" id="trashPermanentlyDelete">
+                <img src="./assets/img/trash.svg" alt="Endgültig entfernen">
+            </button>
+        </nav>
+    </div>`;
+};
+/*
+
+function getCreateCard(index) {
+    return `
+    <div class="card">
+        <header class="cardHeader">
+            <input class="inputHeader" type="text" id="text" placeholder="Titel...">
+        </header>
+        <article>
+            <textarea class="textAreaCreated"
+                id="textAreaCreated" rows="20" cols="30" placeholder="Schreib hier deine Gedanken..." onchange="updateNote(${index}, this.value)">
+                ${notes[index].text}
+            </textarea>
+        </article>
+        <nav class="cardNavCreaded">
+            <button class="btn arrowLeft" id="arrowLeft">
+                <img src="./assets/img/circleArrowLeft.svg" alt="Zum vohrigen Notiz">
+            </button>
+            <button class="btn arrowRight" id="arrowRight">
+                <img src="./assets/img/circleArrowRight.svg" alt="Zum nächsten Notiz">
+            </button>
+            <button class="btn" id="addFolder">
+                <img src="./assets/img/folderPlus.svg" alt="Einen Ordner hinzufügen">
+            </button>
+            <button class="btn" id="trashPermanentlyDelete">
+                <img src="./assets/img/trash.svg" alt="Endgültig entfernen" onclick="deleteTrash(${index})">
+            </button>
+        </nav>
+    </div>
+    `;
+}
+*/
+
+const getCreateFooter = () => {
     const footer = document.querySelector('footer');
     footer.innerHTML = `
         <div class="footerContainer">
@@ -69,4 +131,4 @@ const createFooter = () => {
             </nav>
         </div>`;
 }
-createFooter();
+getCreateFooter();
