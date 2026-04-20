@@ -3,12 +3,15 @@ let notes = [];
 let trashNoteTitles = [];
 let trashNotes = [];
 let notesContainerLayout = document.getElementById('notesContainer');
+let slideRight = document.getElementById('arrowRight');
+let slideLeft = document.getElementById('arrowLeft');
+let noteIndex = 0;
 
 function init() {
     textInputOutput();
     renderNotes();
+    addNewNotes();
 }
-addNewNotes();
 
 function renderNotes() {
     let notesRef = document.getElementById('notesContainer');
@@ -34,7 +37,7 @@ function addNewNotes() {
     const button = document.getElementById('addNewCard');
     const createNotes = document.getElementById('notesContainer');
     button.addEventListener("click", function() {
-        createNotes.innerHTML += getCreateCard();
+        createNotes.innerHTML += getCreateCard(notes[0]);
     });
 }
 
@@ -128,4 +131,25 @@ function renderTrashNotes() {
     for (let indexTrashNote = 0; indexTrashNote < trashNotes.length; indexTrashNote++){
         trashContentRef.innerHTML += " " +  getTrashNoteTemplate(indexTrashNote); 
     }
+}
+
+// slide the notes right or left
+slideRight.addEventListener("click", function () {
+    noteIndex++;
+    if(noteIndex >= notes.length){
+        noteIndex = 0;
+    }
+    updateNote();
+});
+
+slideLeft.addEventListener("click", function() {
+    noteIndex--;
+    if(noteIndex < 0){
+        noteIndex = notes.length - 1;
+    }
+    updateNote();
+});
+
+function updateNote(){
+    
 }
